@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>BMI Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <h2>BMI Calculator</h2>
+            <p>Enter your weight and height to check your BMI!</p>
+            <form id="bmiForm">
+                <div class="input-group">
+                    <label for="weight">Weight (kg or lbs):</label>
+                    <input id="weight" type="number" placeholder="Enter your weight" required />
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (cm or inches):</label>
+                    <input id="height" type="number" placeholder="Enter your height" required />
+                </div>
+
+                <div class="unit-toggle">
+                    <label for="unitMetric">
+                        <input type="radio" id="unitMetric" name="unit" value="metric" checked> Metric (kg, cm)
+                    </label>
+                    <label for="unitImperial">
+                        <input type="radio" id="unitImperial" name="unit" value="imperial"> Imperial (lbs, inches)
+                    </label>
+                </div>
+
+                <div class="input-group">
+                    <button type="button" class="btn" onclick="calculateBMI()">Calculate BMI</button>
+                    <button type="button" id="clearBtn" onclick="clearForm()">Clear</button>
+                </div>
+            </form>
+
+            <div id="results" class="result">Your BMI result will appear here.</div>
+            <div id="bmiGraph"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
